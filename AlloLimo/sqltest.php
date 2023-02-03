@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "id20248617_database";
-$password = "$hj_}2<fjiW=gR51";
+$password = "x=iJ_O#@q1wYieKP";
 $dbname = "id20248617_userdata";
 
 // Create connection
@@ -11,7 +11,7 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO testTable (username, password)
+$sql = "INSERT INTO UserData (username, password)
 VALUES ('JohnDoe', 'thisisapassword')";
 
 
