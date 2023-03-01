@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* imports */
+@font-face {
+	font-family: impress;
+	src: url("../fonts/impress.ttf");
+}
+
+@font-face {
+	font-family: parade;
+	src: url("../fonts/parade.ttf");
+}
+
+
+/* global styles */
+* {
+	box-sizing:border-box;
+	margin-left:0;
+	border:0;
+}
+
+body {
+	background-color:rgba(189, 151, 45, 1); /* satin-sheen-gold*/
+	font-family:impress, sans-serif;
+	color:rgba(67, 59, 99, 1);  /* english-violet */
+	
+	display:grid;
+	grid-template-columns: 240px 1fr;
+	grid-template-areas:
+		"header header"
+		"hero hero"
+		"aside main"
+		"footer footer" 
+}
+
+
+/* header  and footer*/
+header, footer {
+	text-align:center
+}
+
+header ul, footer ul {
+	padding:5px;
+}
+
+header li, footer li {
+	display:inline-block;
+}
+
+header a, footer a {
+	color:rgba(67, 59, 99, 1);  /* english-violet */
+	text-decoration:none;
+	padding:10px;
+	font-weight:bold;
+}
+
+header {
+	grid-area:header;
+	border-style:solid;
+	margin-top:-65px;
+	min-width:550px;
+}
+
+header h1 {
+	color:rgba(191, 64, 29, 1);  /* rust */
+	font-family:parade, serif;
+	text-decoration:underline;
+	position:relative;
+	margin-left:35px;
+	top:55px;
+}
+
+header .seasons {
+	border:solid;
+	border-color:rgba(255,255,255,.2);
+	background-color:rgba(255,255,255,.2);
+	margin: 5px;
+	min-width:100px;
+}
+
+footer {
+	grid-area:footer;
+}
+
+footer p {
+	font-size:.75em;
+}
+
+
+/* main area */
+main {
+	background-color:rgba(139, 199, 209, 1); /* middle-blue */
+	grid-area:main;
+	border:solid;
+}
+
+main article {
+	margin:15px;
+}
+
+main h1 {
+	padding-bottom:5px;
+}
+
+main h2 {
+	color:rgba(191, 64, 29, 1);  /* rust */
+	font-size:1.2em;
+}
+
+main img {
+	width:250px;
+	margin:10px;
+	border:solid;
+	border-radius: 10px;
+}
+
+main pre {
+	font-family:parade, serif;
+	font-style:italic;
+	font-weight:bold;
+}
+
+main blockquote {
+	font-style:italic;
+	padding-left:5px;
+}
+
+
+/* side navigation */
+aside {
+	background-color:rgba(139, 199, 209, .80); /* middle-blue */
+	grid-area:aside;
+	border:solid;
+	border-right:0px;
+}
+
+aside ul {
+	position:fixed;
+	left:-20px;
+}
+
+aside li {
+	border:solid;
+	border-color:rgba(255,255,255,.2);
+	background-color:rgba(255,255,255,.2);
+	margin-top:10px;
+	text-align:center;
+	list-style-type:none;  /* no list marker */
+	min-width:210px;
+}
+
+aside .episodes {
+	display:inline-block;
+	min-width:50px;
+}
+
+aside a {
+	color:rgba(67, 59, 99, 1);  /* english-violet */
+	text-decoration:none;
+	padding:7px;
+	
+	font-weight:bold;
+	font-size:1.5em;
+}
+
+
+/* photo pages */
+#hero {
+	grid-area:hero;
+	background-color:rgba(139, 199, 209, 1); /* middle-blue */
+	border:solid;
+	padding:15px;
+	
+	text-align:center;
+	
+}
+
+#hero img {
+	width:250px;
+	margin:10px;
+	border:solid;
+	border-radius: 10px;
+}
+
+
+/* forms */
+fieldset {
+	border:solid;
+	border-color:rgba(255,255,255,.2);
+	background-color:rgba(255,255,255,.2);
+	margin:10px;
+}
+
+legend {
+	font-variant:small-caps;
+}
+
+input {
+	background-color:rgba(189, 151, 45, .5); /* satin-sheen-gold*/
+	color:rgb(255,255,255);
+	margin:5px 2px;
+	padding:2px 5px;
+	font-size:1.25em;
+	border-radius:10px;
+	width:100%
+}
+
+textarea {
+	width:100%;
+	min-height:150px;
+	border-radius:10px;
+}
+
+.button {
+	width:48%
+}

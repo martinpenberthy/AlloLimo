@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset ="UTF-8" >
+	<title> Contact Us </title>
+	<link href = "../css/main.css" rel = "stylesheet"> 
+	
+</head>
+
+<body>
+
+<header>
+	<h1> Contact Us </h1>
+	<nav id = "top_menu">
+		<ul>
+			<li><img src = "../images/allo_limo_logo.png" alt = "Logo of Allo Limo" height = "45"></li>
+			<li><a href = "../index.html">HOME</a></li>
+			<li><a href = "fleet.html">FLEET INFO</a></li>
+			<li><a href = "contact.html">CONTACT US</a></li>
+			<li><a href = "reservation.html">RESERVATIONS</a></li>
+			<li><a href = "drivers.html">DRIVERS</a></li>
+		</ul>
+	</nav>
+</header>
+<hr>	
+
+<div id = "hero">
+	<h1>Contact Us!</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<form method = "post" action = "../scripts/contact.php">
+		<fieldset>
+			<legend>Personal Info</legend>
+			<label for = "firstName">First Name:</label>
+			<input type = "text" name = "firstName" id = "firstName"  required placeholder = "Required">
+			<br>
+			<label for = "lastName">Last Name:</label>
+			<input type = "text" name = "lastName" id = "lastName" required placeholder = "Required">
+			<br>
+			<label for "myEmail">Email:</label>
+			<input type = "email" name = "myEmail" id = "myEmail" required placeholder = "Required">
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Content</legend>
+			<label for = "subject">Subject:</label>
+			<input type = "text" name = "subject" id = "subject" required placeholder = "Required">
+			<br>
+			<label for "comments">Tell us what's on your mind:</label>
+			<br>
+			<textarea name = "comments"></textarea>
+		</fieldset>
+		<fieldset>
+		<input class = "button" type = "submit" value = "Send Us Your Info">
+		<input class = "button" type = "reset" value = "Clear Form">
+		</fieldset>
+		</form>	
+</div>
+
+<footer>
+	<nav id = "bottom_menu">
+		<ul>
+			<li><a href = "../index.html">home</a></li>
+			<li><a href = "fleet.html">fleet info</a></li>
+			<li><a href = "contact.html">contact us</a></li>
+			<li><a href = "reservation.html">reservations</a></li>
+			<li><a href = "drivers.html">drivers</a></li>	
+		</ul>
+	</nav>
+	<p>Copyright &copy; 2023. Allo Limo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
