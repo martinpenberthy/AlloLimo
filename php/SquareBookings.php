@@ -21,13 +21,16 @@ try {
         $result = $apiResponse->getResult();
         $resultString = json_encode($result, true);
 
-        echo $resultString;
-        echo "<br><br><br>";
-        $userIds = explode("\"id\":", $resultString);
+        $decoded_json = json_decode($resultString, true);
+        $customers = $decoded_json['customers'];
+        echo $customers[0]['id'];
+        //echo $resultString;
+        //echo "<br><br><br>";
+        /*$userIds = explode("\"id\":", $resultString);
 
         echo $userIds[0];
         echo "<br>";
-        echo $userIds[1];
+        echo $userIds[1];*/
         /*foreach($userIds as $id)
         {
             echo $id;
@@ -40,12 +43,9 @@ try {
         //echo $result["customers"][0]["id"];
         //echo $apiResponse->result->customers[0]->getId();
         //echo $result["id"];
-        echo "<br><br><br>";
-        $decoded_json = json_decode($resultString, true);
-        $customers = $decoded_json['customers'];
-        echo $customers[0]['id'];
+        //echo "<br><br><br>";
+
         //echo $decoded_json["customers"];
-            
     } else {
         $errors = $apiResponse->getErrors();
         foreach ($errors as $error) {
@@ -62,4 +62,11 @@ try {
     echo "ApiException occurred: <b/>";
     echo $e->getMessage() . "<p/>";
 }
+
+
+//header('Location:'.$_SERVER['HTTP_REFERER']);
+
 ?>
+<script type="text/javascript">
+    window.location.replace("https://allolimo.000webhostapp.com/");
+</script>

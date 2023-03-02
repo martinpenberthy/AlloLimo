@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use Square\SquareClient;
 use Square\Environment;
@@ -15,7 +15,7 @@ $client = new SquareClient([
 try {
 
     $apiResponse = $client->getLocationsApi()->listLocations();
-
+    #$apiResponse = $client->getBookingsApi()->listBookings();
     if ($apiResponse->isSuccess()) {
         $result = $apiResponse->getResult();
         foreach ($result->getLocations() as $location) {
